@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Playball&family=Rufina:wght@400;700&display=swap');
+
+
+.script-heading {
+  font-family: 'Allura', cursive;
+  font-size: 42px;
+  color: #8d637c;
+  font-weight: bold;
+}
+
+.main-heading {
+   font-family: "Rufina", serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #2b2b2b;
+  letter-spacing: 1px;
+}
+
+.text-content {
+  font-family: 'Courgette', cursive;
+  font-size: 16px;
+  color: #6b6b6b;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 991px) {
+
+  .navbar .container-fluid {
+    position: relative;
+  }
+
+  /* 🌸 CENTER LOGO */
+  .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* 🔍 LEFT ICONS */
+  .mobile-icons {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 2;
+  }
+
+  /* ☰ RIGHT MENU */
+  .navbar-toggler {
+    margin-left: auto;
+    z-index: 2;
+  }
+
+}
+
+
+
+
+
+/* Transparent */
+.navbar-transparent {
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
+/* After scroll */
+.navbar-scrolled {
+   background: #7d5a7b;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Nav links */
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.navbar-scrolled .nav-link {
+  color: white !important;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  height: 100%;
+  background: #7d5a7b;
+  z-index: 2000;
+  transition: 0.4s ease;
+  padding: 20px;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+
+/* Mobile links */
+.mobile-nav {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.mobile-nav li {
+  margin: 15px 0;
+}
+
+.mobile-nav a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1500;
+}
+
+/* Icon color */
+.navbar i {
+  color: rgb(1, 1, 1);
+}
+.bg-i {
+  background-color: #a841a8;
+}
+
+
+/* Shop Navbar text & icons */
+.navbar-shop .nav-link {
+  color: #eae6e6 !important;  /* force dark text */
+}
+
+.navbar-shop .dropdown-item {
+  color: #f3eaea !important;
+}
+
+.navbar-shop i {
+  color: #f9f7f7 !important;
+}
+
+/* Optional: hover effect */
+.navbar-shop .nav-link:hover,
+.navbar-shop .dropdown-item:hover {
+  color: #555 !important;
+}
+
+
+.navbar-dark {
+  background: rgb(173, 139, 173) !important;
+}
+
+/* FULL HEIGHT HERO */
+.hero-carousel {
+  height: 100vh;
+}
+
+/* Each slide */
+.carousel-item {
+  height: 100vh;
+  position: relative;
+}
+
+/* Wrapper to control image */
+.carousel-img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* IMAGE FIX */
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* 🔥 THIS FIXES YOUR PROBLEM */
+  object-position: center 20%;
+}
+
+/* Optional overlay for premium look */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Keep image above overlay */
+.carousel-img-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Overlay */
+.form-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Arch Card */
+.arch-form {
+  width: 420px;
+  max-width: 90%;
+  padding: 40px;
+
+  background-color: rgb(165, 125, 165);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+
+  border-radius: 220px 220px 25px 25px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  color: white;
+}
+
+/* Title */
+.form-title {
+  font-family: 'Playfair Display', serif;
+  color: #f8f3ff;
+}
+
+/* Floating Input */
+.floating-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.floating-group input {
+  width: 100%;
+  padding: 10px 5px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  outline: none;
+}
+
+.floating-group label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+/* Floating Animation */
+.floating-group input:focus + label,
+.floating-group input:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* Focus Glow */
+.floating-group input:focus {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+/* Radio */
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.radio-group label {
+  cursor: pointer;
+}
+
+/* Button */
+.submit-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #c8a8e9, #a178c2);
+  color: white;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.top-heading {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  z-index: 10;
+}
+
+.top-heading h1 {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+
+.offcanvas-header {
+  border-bottom: 1px solid #eee;
+}
+
+.offcanvas-body img {
+  object-fit: cover;
+}
+
+.bi-x:hover {
+  color: black;
+}
+
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  image-rendering: auto;
+}
+
+/* ================= HERO FIX ================= */
+.hero-carousel {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= OFFCANVAS FIX ================= */
+.offcanvas {
+  z-index: 99999 !important;   /* 🔥 ALWAYS ABOVE EVERYTHING */
+}
+
+/* FULLSCREEN SEARCH */
+.premium-search {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100vh !important;
+  width: 100vw !important;
+
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+
+  z-index: 99999 !important;  /* 🔥 TOP LAYER */
+}
+
+/* FORCE HEIGHT */
+.offcanvas-top {
+  height: 100vh !important;
+}
+
+/* SCROLL FIX */
+.offcanvas-body {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* ================= CONTAINER ================= */
+.premium-search-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
+  background-color: #dddade;
+}
+
+/* ================= TITLE ================= */
+.premium-search-title {
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #4b3f33;
+}
+
+/* ================= INPUT ================= */
+.premium-search-input {
+  width: 60%;
+  max-width: 800px;
+  padding: 16px 25px;
+  border-radius: 50px;
+  border: 1px solid #c8b99a;
+  background: #c0b0bd;
+  outline: none;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.premium-close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100000; /* 🔥 ABOVE EVERYTHING */
+}
+
+/* ================= CARD ================= */
+.premium-result-card {
+  background: rgb(154, 135, 147);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.premium-result-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= IMAGE ================= */
+.premium-result-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ================= CONTENT ================= */
+.premium-result-content {
+  padding: 10px;
+}
+
+.premium-result-name {
+  font-size: 16px;
+  font-weight: 600;
+}
