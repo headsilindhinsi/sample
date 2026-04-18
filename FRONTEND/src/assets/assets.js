@@ -28,7 +28,7 @@ import product4 from "./Images/products_images/product4.png"
 import news1 from "./Images/News_images/news1.png"
 import news2 from "./Images/News_images/news2.png"
 import news3 from "./Images/News_images/news3.png"
-import About1 from "./Images/About_Images/about1.png"
+import about1 from "./Images/About_Images/about1.png"
 import About3 from "./Images/About_Images/about3.png"
 import swiper1 from "./Images/About_Images/Swiper_Images/swiper1.png"
 import swiper2 from "./Images/About_Images/Swiper_Images/swiper2.png"
@@ -180,9 +180,8 @@ export const Latest = [
     }
 ]
 
-export const bannerImg = About1;
+export const bannerImg = about1;
 
-export const section1 = About2;
 
 export const section2 = About3;
 
