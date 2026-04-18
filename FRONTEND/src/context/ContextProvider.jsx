@@ -13,7 +13,7 @@ const ContextProvider = ({ children }) => {
   useEffect(() => {
   const fetchProducts = async () => {
     try {
-      const res = await  fetch("http://localhost:5000/product/products?category=shop")// 👈 your API
+      const res = await  fetch("https://great-wedding.onrender.com/product/products?category=shop")// 👈 your API
       const data = await res.json();
 
       console.log("DATA:", data); // 🔍 check this
@@ -171,27 +171,36 @@ const getCartTotal = () =>
     }
 
 
-const timerRef = useRef(null);
+       
 
-const [ Input , setInput] = useState("")
-const [ filteredData , setFilteredData] = useState([])
+const [Input, setInput] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [ searched , setSearched ] = useState("")
+  const timerRef = useRef(null);
+
 const SearchFun = (value) => {
   setInput(value);
+  setSearched(false);
 
   if (timerRef.current) {
     clearTimeout(timerRef.current);
   }
 
   timerRef.current = setTimeout(async () => {
-    if (!value) {
+    if (!value.trim()) {
       setFilteredData([]);
+      setLoading(false);
       return;
     }
 
     try {
+      setLoading(true);
+
       const res = await fetch(
         "http://localhost:5000/product/products?category=shop"
       );
+
       const data = await res.json();
 
       const results = data.filter((item) =>
@@ -199,12 +208,18 @@ const SearchFun = (value) => {
       );
 
       setFilteredData(results);
+      setSearched(true);
 
-    } catch (err) {
-      console.log("Search Error:", err);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
     }
   }, 400);
 };
+
+
+  
 
 
     const [ firstName , setFirstName] = useState("")
@@ -357,7 +372,11 @@ const UserSubmitFun = async (e, productData) => {
       filteredData , setFilteredData,
       SearchFun,
       setProductData,
-      productData
+      productData,
+      loading , setLoading,
+      searched , setSearched
+      
+      
 
       
 

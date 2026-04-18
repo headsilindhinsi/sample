@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 const MyContext = createContext();
 
 const ContextProvider = ( {children}) => {
-  var url = "http://localhost:5000"
+  var url = "https://great-wedding.onrender.com"
 
 var [ category , setCategory] = useState("")
 var [ type , setType] = useState("")
