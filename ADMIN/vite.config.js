@@ -7,6 +7,7 @@ export default defineConfig({
   server : {
     host : "0.0.0.0",
     port : 5000,
-    allowedHosts : ['https://great-wedding-admin.onrender.com']
+    allowedHosts : ['great-wedding-admin-h1yo.onrender.com']
   }
 })
+ 
