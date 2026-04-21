@@ -272,16 +272,16 @@ const ShopNavbar = () => {
 
 {/* search offcanvas*/}
 
-     <div
-  className="offcanvas offcanvas-top premium-search"
-  tabIndex="-1"
-  id="offcanvasTop"
->
+    <div
+              className="offcanvas offcanvas-top premium-search"
+              tabIndex="-1"
+              id="offcanvasTop"
+            >
 
-  {/* ✅ REQUIRED */}
-  <div className="offcanvas-body">
+              {/* ✅ REQUIRED */}
+              <div className="offcanvas-body">
 
-    <div className="premium-search-container">
+                <div className="premium-search-container">
 
       {/* CLOSE */}
       <button
@@ -296,12 +296,12 @@ const ShopNavbar = () => {
       </button>
 
       {/* TITLE */}
-      <h1 className="premium-search-title">Search</h1>
+      <h1 className="premium-search-title text-content">Search</h1>
 
       {/* INPUT */}
       <input
         className="premium-search-input"
-        placeholder="Search products, rooms, décor..."
+        placeholder="Search products, Cake, Decoration Flowers..."
         value={Input}
         onChange={(e) => SearchFun(e.target.value)}
       />
@@ -309,44 +309,44 @@ const ShopNavbar = () => {
       {/* RESULTS */}
       <div className="row mt-4 w-100">
 
-        {Input && filteredData.length === 0 ? (
-          <p className="text-muted text-center mt-5">
-            No matching results found.
-          </p>
-        ) : (
-          filteredData.map((item) => (
-            <div
-              className="col-lg-3 col-md-6 col-12 my-3"
-              key={item._id}
-              onClick={() => {
-                navigate(`/Dynamic/${item._id}`);
-                setInput("");
-                setFilteredData([]);
-              }}
-              style={{ cursor: "pointer" }}
-            >
-              <div className="premium-result-card">
+  {loading ? (
+    <p className="text-muted text-center mt-5">
+      Loading...
+    </p>
+  ) : searched && filteredData.length === 0 ? (
+    <p className="text-muted text-center mt-5">
+      No matching products found
+    </p>
+  ) : (
+    filteredData.map((item) => (
+      <div
+        className="col-lg-3 col-md-6 col-12 my-3"
+        key={item._id}
+       onClick={() => {
+  navigate(`/product/${item._id}`);
+  setInput("");
+  setFilteredData([]);
 
-                <img
-                  src={item.img}
-                  className="premium-result-img"
-                  alt=""
-                />
+        }}
+        style={{ cursor: "pointer" }}
+      >
+        <div className="premium-result-card">
+          <img src={item.img} className="premium-result-img" alt="" />
 
-                <div className="premium-result-content">
-                  <p className="premium-result-type">{item.type}</p>
-                  <h5 className="premium-result-name">{item.desc}</h5>
-                  <p className="premium-result-price">
-                    ₹{item.price}
-                  </p>
-                </div>
-
-              </div>
-            </div>
-          ))
-        )}
-
+          <div className="premium-result-content">
+            <p className="premium-result-type">{item.type}</p>
+            <h5 className="premium-result-name">{item.desc}</h5>
+            <p className="premium-result-price">
+              ₹{item.price}
+            </p>
+          </div>
+        </div>
       </div>
+    ))
+  )}
+
+</div>
+
 
     </div>
   </div>
