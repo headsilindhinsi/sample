@@ -16,7 +16,7 @@ const Header = () => {
 
     console.log("Fetching product ID:", id);
 
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://great-wedding.onrender.com/product/${id}`)
       .then(res => res.json())
       .then(data => {
         console.log("Product Data:", data);
