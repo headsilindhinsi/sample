@@ -48,7 +48,7 @@ const Buy = () => {
     // 🟢 SINGLE PRODUCT (old flow)
     if (!id) return;
 
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://great-wedding.onrender.com/product/${id}`)
       .then(res => res.json())
       .then(data => {
         setProductData(data);

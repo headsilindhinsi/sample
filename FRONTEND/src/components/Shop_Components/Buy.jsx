@@ -8,7 +8,7 @@ const Buy = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch("http://localhost:5000/product/products?category=shop")
+    fetch("https://great-wedding.onrender.com/product/products?category=shop")
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.log(err));

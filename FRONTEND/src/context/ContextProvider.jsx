@@ -27,7 +27,7 @@ const ContextProvider = ({ children }) => {
   fetchProducts();
 }, []);
 
-  var url = "http://localhost:5000"
+  var url = "https://great-wedding.onrender.com"
   const navigate = useNavigate()
 
    const [scrolled, setScrolled] = useState(false);
