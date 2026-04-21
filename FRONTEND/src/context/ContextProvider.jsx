@@ -198,7 +198,7 @@ const SearchFun = (value) => {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/product/products?category=shop"
+        "https://great-wedding.onrender.com/product/products?category=shop"
       );
 
       const data = await res.json();
