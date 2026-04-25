@@ -27,7 +27,7 @@ const ShopNavbar = () => {
     <>
       <style>{`
         .custom-navbar {
-          background-color: #81559a;
+          background-color: #9b72b2;
           padding: 12px 20px;
         }
 
