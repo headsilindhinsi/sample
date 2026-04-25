@@ -7,12 +7,12 @@ import Shop from './pages/Shop'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import Contact from './pages/Contact'
-import Buy from './components/Common_components/Buy'
 import Dynamic from './pages/Dynamic'
 import Cart from './components/Home_Components/Cart'
 import PortfolioHome from './components/portfolio_Components/PortfolioHome'
 import Blog from './pages/Blog'
 import Protect from './pages/Protect'
+import CheckOut from './components/Common_components/CheckOut'
 
 
 const App = () => {
@@ -27,10 +27,10 @@ const App = () => {
         <Route path = "/About-us" element={<About_us />} />
         <Route path= "/Contact" element = {<Contact/>} />
         <Route path="/Shop" element={<Shop />} />
-        <Route path='/Buy/:id' element={<Buy/>} />
+        <Route path='/Check/:id' element={<CheckOut/>} />
         <Route path='/product/:id' element={<Dynamic/>} />
         <Route path='/Cart' element={<Cart/>} />
-        <Route path='/buy' element={<Buy/>} />  
+        <Route path='/Checkout' element={<CheckOut/>} />  
         <Route path='/PortFolio' element={<PortfolioHome/>} />  
         <Route path='/Blog' element={<Blog/>} />  
 

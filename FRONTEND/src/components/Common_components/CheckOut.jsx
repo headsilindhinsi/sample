@@ -5,7 +5,7 @@ import { useParams, useLocation } from "react-router-dom"; // ✅ added
 import ShopNavbar from "./ShopNavbar";
 import Footer from "./Footer";
 
-const Buy = () => {
+const CheckOut = () => {
 
   const { id } = useParams();
   const location = useLocation(); // ✅ NEW
@@ -259,4 +259,4 @@ const Buy = () => {
   );
 };
 
-export default Buy;
+export default CheckOut;

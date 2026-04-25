@@ -147,7 +147,7 @@ body {
       {/* HEADER */}
       <div className="shop-header">
         <h1 className="shop-title">Shop Page</h1>
-        <p className="shop-breadcrumb">Home // Shop</p>
+        <p className="shop-breadcrumb">Home / Shop</p>
       </div>
 
       {/* PRODUCTS */}

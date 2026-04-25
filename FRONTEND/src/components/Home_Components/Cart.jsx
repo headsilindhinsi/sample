@@ -115,7 +115,7 @@ const Cart = () => {
 
             <button
                         onClick={() =>
-                            navigate("/buy", {
+                            navigate("/Checkout", {
                             state: {
                                 items: cartItems.filter(item =>
                                 selectedItems.includes(item.id)
