@@ -67,7 +67,7 @@ body {
 
             <button
               className="btn btn-dark mt-3"
-              onClick={() => navigate(`/Checkout/${selectedProduct._id}`)}
+              onClick={() => navigate(`/Check/${selectedProduct._id}`)}
             >
               Buy Now
             </button>
