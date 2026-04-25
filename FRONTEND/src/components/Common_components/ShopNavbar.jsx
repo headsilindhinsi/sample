@@ -20,6 +20,7 @@ const ShopNavbar = () => {
     setFilteredData,
     setInput,
     loading,
+    searched
   } = useContext(MyContext);
 
   return (
