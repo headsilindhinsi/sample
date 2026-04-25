@@ -19,6 +19,7 @@ const ShopNavbar = () => {
     Input,
     setFilteredData,
     setInput,
+    loading,
   } = useContext(MyContext);
 
   return (
