@@ -3,7 +3,6 @@ import React from 'react'
 import Navbar from '../components/Common_components/Navbar'
 import Footer from '../components/Common_components/Footer'
 import Carousel from '../components/Home_Components/Carousel'
-// import Timer from '../components/Home_Components/Timer'
 import Center from '../components/Home_Components/Center'
 import Coloumn from '../components/Home_Components/Coloumn'
 import PhotoGrapy from '../components/Home_Components/PhotoGrapy'
@@ -20,7 +19,6 @@ const Home = () => {
         <Navbar />
         <Carousel/>
         <Gallery />
-       {/* <Timer /> */}
        <Center />
         <Coloumn />
         <PhotoGrapy/>
